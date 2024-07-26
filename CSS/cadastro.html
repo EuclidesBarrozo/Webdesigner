@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td.escolaridade{
+            text-align: left;
+        }
+        .escolaridade{
+            height: 20px;
+        }
+        table{
+            width: 100%;
+        }
+        fieldset{
+            margin-bottom: 10px;
+        }
+        td{
+            text-align: right;
+            padding: 5px;
+            border:1px;
+            border-color: rgb(217, 214, 214);
+            border-style: solid;
+        }
+        /*input, select{
+            width: 100%;
+            height: 30px;
+            border-radius: 4px;
+            background: #eeeeee;
+            border: 1px solid ;
+            border-color: blue;
+            box-shadow: 1px 1px 2px #333333;
+        }*/
+         input:hover{
+            background: #ffffff; 
+         }
+        input:focus{
+                background: #ffffff; 
+            }
+        h1{
+            text-align: center;
+        }
+        div{
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        input[type=submit]{
+            background-color: blue;
+            color:white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!--Form - informa ao navegador que iniciará um formulário-->
+    <div>
+    <h1>Cadastro de Funcionário</h1>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <table>
+                <tr>
+                    <td>Nome:</td>
+                    <td><input type="text" name="nome"><br></td>
+                </tr>
+                <tr>
+                    <td>Sobrenome:</td>
+                    <td><input type="text" name="sobrenome"><br></td>
+                </tr>
+                <tr>
+                    <td>Idade:</td>
+                    <td><input type="number" name="idade" min="0" max="120"><br></td>
+                </tr>
+                <tr>
+                    <td> Data de nascimento: </td>
+                    <td><input type="date" name="D_nascimento"><br></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Profissionais</legend>
+            <table>
+            <tr>
+              <td>Escolaridade:</td>
+             <td class="escolaridade">
+            <input type="radio" name="escolaridade" class="escolaridade" value="Ensino Fundamental Incompleto">Ensino Fundamental Incompleto<br>
+            <input type="radio" name="escolaridade" class="escolaridade" value="Ensino Fundamental Completo">Ensino Fundamental Completo <br>
+            <input type="radio" name="escolaridade" class="escolaridade" value="Ensino Médio Incompleto">Ensino Médio Incompleto <br>
+            <input type="radio" name="escolaridade" class="escolaridade" value="Ensino Médio Completo">Ensino Médio Completo <br>
+            </td>
+            </tr>
+            <tr>
+            <td>Última experiência:</td>
+            <td><input type="text" name="experiencia"></td>
+            </tr>
+            <!--placeholder - texto padrão que auxilia o usuário, indicando o que se espera naquele input
+            required - torna o preenchimento do input obrigatório-->
+            <tr>
+            <td>Pretensão Salarial:* </td>
+            <td><input type="number" name="pretensao" step="0.10" min="0.00" placeholder="0.00"
+                required></td>
+            </tr>
+
+        </table>
+        </fieldset>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Salvar">
+    </form>
+    </div>
+</body>
+
+</html>
